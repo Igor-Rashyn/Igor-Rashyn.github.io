@@ -1,1 +1,165 @@
-Hello World
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Profile Igor Rashyn</title>
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.1/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,600,400italic,300,300italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body class="skrollr-decks-init" data-skrollr-decks-history="true">
+		<div class="wrapper">
+
+			<section class="float-deck" id="third-img"
+			data-anchor-target="#third" data-smooth-scrolling="off"
+			data-bottom-bottom="transform: translateY(0%);"
+			data-top-bottom="transform: translateY(0%);">
+					<div id="contact">
+						<div class="contact-1">
+						<img src="img/IgorRashyn.jpg" alt="Photograph of Igor Rashyn" class="profile-photo">
+						</div>
+						<div class="contact-2">
+							<h3>Contact Details</h3>
+							<ul>
+								<li class="phone"><a href="tel:13-13-13-13">13-13-13-13</a></li>
+								<li class="mail"><a href="mailto:igor.rashyn@gmail.com">igor.rashyn@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+			</section>
+			
+			<section class="float-deck" id="second-img"
+			data-anchor-target="#second" data-smooth-scrolling="off"
+			data-bottom-bottom="transform: translateX(0%);"
+			data-top-bottom="transform: translateX(-100%);">
+					<div id="about">
+						<div id="pacman_container">
+						 	<div id="pacman_top"></div>
+						 	<div id="pacman_bottom"></div>
+						</div>
+						<div class="about-text" data-200="opacity:0;transform:rotate(-90deg) translateX(0%);" data-500="opacity:1;transform: rotate(-90deg) translateX(50%);">ABOUT</div>
+						<p>I'm studing to be a software developer with EDA and making this website
+							is part of my homework (phase 0 week two).
+						</p>
+						<p>
+							<span>5</span> years of experience as a business analyst in IT companies.
+							I worked on implementation and integration of CRM systems in the financial institutions, being coordinator between the development team and final customer. 
+						</p>
+						<p>I've finished the C#.NET courses. You can find all my practical tasks and graduation project at <a href="">GitHub</a>
+						</p>
+						<div class="whatilove wil-img btn" id="whatilove" onclick="actionButton(this)"></div>
+						<div class="skillsihave sih-img btn" id="skillsihave" onclick="actionButton(this)"></div>
+
+						<div class="whatilove-text desc-text" id="whatilove-text">
+							<ul>
+								<li>My Family</li>
+								<li>Create something interesting</li>
+								<li>JAZZ</li>
+								<li>Snowboarding</li>
+								<li>Traveling</li>
+								<li>Books</li>
+							</ul>
+						</div>
+						<div class="skillsihave-text desc-text" id="skillsihave-text">
+							<ul>
+								<li>C#</li>
+								<li>ASP.NET MVC5</li>
+								<li>Entity Framework</li>
+								<li>WPF</li>
+								<li>WCF</li>
+								<li>Photoshop/Illustrator</li>
+								<li>SQL</li>
+							</ul>
+						</div>
+						<div class="process_wrap">
+							<ul>
+								<li class="process discover"> </li>
+								<li class="process define"> </li>
+								<li class="process design"> </li>
+								<li class="process refine"> </li>
+								<li class="process launch"> </li>
+							</ul>
+						</div>
+					</div>
+			</section>
+
+			<main id="skrollr-body">
+				<section class="skrollr-deck" id="first">
+
+					<ul id="scene" class="scene">
+						<li class="layer" data-depth="0.2">
+							<div class="clouds img1 cl1 waveClouds"></div>
+						</li>
+						<li class="layer" data-depth="0.3">
+							<div class="clouds img2 cl2 waveClouds"></div>
+						</li>
+						<li class="layer" data-depth="0.4">
+							<div class="clouds img3 cl3 waveClouds"></div>
+						</li>		
+					</ul>
+
+					<div class="airplane_container">
+						<div class="airplane img fly wave"> </div>
+					</div>
+
+					<div id="intro" data-0="opacity: 1;top:3%;transform:rotate(0deg);" data-500="opacity: 0;top:-10%;transform:rotate(-90deg); ">
+							<h1>Hello World! </h1>
+							<h1>I'm Igor Rashyn</h1>
+							<p>This is my portfolio</p>
+							<p>My <a href="https://github.com/Igor-Rashyn" target="_blank">GitHub</a> profile</p>
+					</div>
+
+					<div class="col" data-0="opacity:1;transform:translateY(0%)" data-500="opacity:0;transform:translateY(80%)"></div>
+					<div class="big" data-0="opacity:1;transform:translateY(0%)" data-500="opacity:0;transform:translateY(80%)"></div>
+					<div class="piz" data-0="opacity:1;transform:translateY(0%)" data-500="opacity:0;transform:translateY(80%)"></div>
+					<div class="ef" data-0="opacity:1;transform:translateY(0%)" data-500="opacity:0;transform:translateY(80%)"></div>
+
+				</section>
+				<section class="skrollr-deck float-void" id="second"></section>
+				<section class="skrollr-deck float-void" id="third"></section>
+			</main>
+
+			<script src="scripts/skrollr.min.js"></script>
+			<script src="scripts/skrollr.decks.js"></script>
+			<script src="scripts/parallax.js"></script>
+
+			<script type="text/javascript">
+				var s = skrollr.init({
+					edgeStrategy: 'set',
+					easing: {
+						WTF: Math.random,
+						inverted: function(p) {
+							return 1-p;
+						}
+					}
+				});
+
+				var scene = document.getElementById('scene');
+				var parallax = new Parallax(scene);
+
+				function actionButton(el){
+					var elem1=document.getElementById('whatilove-text');
+					var elem2=document.getElementById('skillsihave-text');
+					if (el.id=="whatilove")
+					{
+						elem1.style.display=null;
+						elem2.style.display='none';
+						document.getElementById('skillsihave').style.opacity=0.6;
+						document.getElementById('whatilove').style.opacity=1;
+					}
+					else if (el.id=="skillsihave"){
+						elem2.style.display='block';
+						elem1.style.display='none';
+						document.getElementById('skillsihave').style.opacity=1;
+						document.getElementById('whatilove').style.opacity=0.6;
+					}
+				};
+
+			</script>
+
+		</div>
+
+	</body>
+</html>
